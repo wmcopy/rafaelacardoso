@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<!-- Versão v005: hero v004 preservado; correção exclusiva de overflow/arraste horizontal no mobile. -->
+<!-- Versão: v004 — hero mobile transplantado da estrutura funcional da página Vânia. -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Studio Rafaela Cardoso — Alisamentos e Mega Hair</title>
+<meta name="description" content="Alisamento e Mega Hair para o cabelo que você quer ver no espelho. Converse com a Rafaela e descubra o resultado possível para o seu cabelo.">
+<!-- PENDÊNCIAS: 1) logo original; 2) FOTO-01 real → --foto-hero; 3) pares reais → .slot; 4) fotos reais dos serviços → --foto-alisamento / --foto-mega; 5) fotos reais da galeria → .g-slot; 6) retrato real → --foto-rafaela; 7) barra flutuante inferior (próxima etapa). WhatsApp, Instagram e endereço já conectados. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14120F; --ink-soft:#29241F;
+  --ivory:#F7F3ED; --sand:#EBE3D7;
+  --gold:#C5A46A; --gold-hover:#D8BA82; --gold-ink:#80602E;
+  --text:#29241F; --text-muted:#6B6055;
+  --line-light:#D9CFC0; --line-dark:#4A4137;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Manrope",Arial,sans-serif;
+  /* PLACEHOLDERS conceituais (SVG). Trocar por url("foto-real.webp") quando chegar o acervo. */
+  --foto-hero:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27900%27%20height%3D%271200%27%20viewBox%3D%270%200%20900%201200%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27a%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2329241F%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%2314120F%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%230d0b09%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27b%27%20cx%3D%27.5%27%20cy%3D%27.3%27%20r%3D%27.75%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23C5A46A%27%20stop-opacity%3D%27.2%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23C5A46A%27%20stop-opacity%3D%270%27%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27900%27%20height%3D%271200%27%20fill%3D%27url%28%23a%29%27%2F%3E%3Crect%20width%3D%27900%27%20height%3D%271200%27%20fill%3D%27url%28%23b%29%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M310%20-60C270%20300%20350%20720%20305%201260%27%20stroke%3D%27%23332b24%27%20stroke-width%3D%27110%27%20opacity%3D%27.5%27%2F%3E%3Cpath%20d%3D%27M460%20-60C430%20340%20510%20760%20465%201260%27%20stroke%3D%27%233a3129%27%20stroke-width%3D%27130%27%20opacity%3D%27.45%27%2F%3E%3Cpath%20d%3D%27M610%20-60C580%20300%20660%20720%20615%201260%27%20stroke%3D%27%232b241e%27%20stroke-width%3D%27110%27%20opacity%3D%27.5%27%2F%3E%3Cpath%20d%3D%27M385%20-60C355%20320%20430%20740%20390%201260%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%275%27%20opacity%3D%27.14%27%2F%3E%3Cpath%20d%3D%27M535%20-60C505%20320%20585%20740%20540%201260%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%274%27%20opacity%3D%27.1%27%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%27%23C5A46A%27%20opacity%3D%27.15%27%3E%3Ccircle%20cx%3D%27150%27%20cy%3D%27230%27%20r%3D%2722%27%2F%3E%3Ccircle%20cx%3D%27760%27%20cy%3D%27190%27%20r%3D%2716%27%2F%3E%3Ccircle%20cx%3D%27690%27%20cy%3D%27330%27%20r%3D%2710%27%2F%3E%3Ccircle%20cx%3D%27210%27%20cy%3D%27410%27%20r%3D%278%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --foto-rafaela:var(--ph-light); /* placeholder independente do hero; trocar pelo retrato real */
+  --ph-light:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27600%27%20height%3D%27750%27%20viewBox%3D%270%200%20600%20750%27%3E%3Crect%20width%3D%27600%27%20height%3D%27750%27%20fill%3D%27%23EBE3D7%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M200%20-40C170%20200%20230%20480%20195%20790%27%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2770%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M310%20-40C285%20220%20350%20500%20310%20790%27%20stroke%3D%27%23DFD5C6%27%20stroke-width%3D%2780%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M420%20-40C400%20200%20460%20480%20425%20790%27%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2770%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M255%20-40C230%20210%20290%20490%20255%20790%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%273%27%20opacity%3D%27.22%27%2F%3E%3Cpath%20d%3D%27M365%20-40C340%20210%20400%20490%20365%20790%27%20stroke%3D%27%2380602E%27%20stroke-width%3D%272.5%27%20opacity%3D%27.15%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --foto-alisamento:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%271000%27%20viewBox%3D%270%200%20800%201000%27%3E%3Crect%20width%3D%27800%27%20height%3D%271000%27%20fill%3D%27%231b1713%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M180%20-40L175%201040%27%20stroke%3D%27%232b241e%27%20stroke-width%3D%2790%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M320%20-40L318%201040%27%20stroke%3D%27%23332b24%27%20stroke-width%3D%27110%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M470%20-40L468%201040%27%20stroke%3D%27%232b241e%27%20stroke-width%3D%27100%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M620%20-40L618%201040%27%20stroke%3D%27%233a3129%27%20stroke-width%3D%2790%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M250%20-40L248%201040%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%274%27%20opacity%3D%27.18%27%2F%3E%3Cpath%20d%3D%27M545%20-40L543%201040%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%273%27%20opacity%3D%27.14%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --foto-mega:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271200%27%20height%3D%27800%27%20viewBox%3D%270%200%201200%20800%27%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27%23E4DACB%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M-40%20160C300%20120%20700%20200%201240%20150%27%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2770%27%20opacity%3D%27.9%27%2F%3E%3Cpath%20d%3D%27M-40%20300C300%20260%20700%20340%201240%20290%27%20stroke%3D%27%23CFBFA9%27%20stroke-width%3D%2780%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M-40%20450C300%20410%20700%20490%201240%20440%27%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2780%27%20opacity%3D%27.9%27%2F%3E%3Cpath%20d%3D%27M-40%20600C300%20560%20700%20640%201240%20590%27%20stroke%3D%27%23CFBFA9%27%20stroke-width%3D%2770%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M-40%20230C300%20190%20700%20270%201240%20220%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%274%27%20opacity%3D%27.25%27%2F%3E%3Cpath%20d%3D%27M-40%20520C300%20480%20700%20560%201240%20510%27%20stroke%3D%27%2380602E%27%20stroke-width%3D%273%27%20opacity%3D%27.15%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  /* Mapa estilizado (SVG) */
+  --mapa:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%27600%27%20viewBox%3D%270%200%20800%20600%27%3E%3Crect%20width%3D%27800%27%20height%3D%27600%27%20fill%3D%27%23F2ECE2%27%2F%3E%3Cg%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2714%27%20fill%3D%27none%27%20opacity%3D%27.8%27%3E%3Cpath%20d%3D%27M0%20150H800%27%2F%3E%3Cpath%20d%3D%27M0%20340C200%20320%20500%20360%20800%20330%27%2F%3E%3Cpath%20d%3D%27M0%20500H800%27%2F%3E%3Cpath%20d%3D%27M180%200V600%27%2F%3E%3Cpath%20d%3D%27M420%200C430%20200%20410%20400%20425%20600%27%2F%3E%3Cpath%20d%3D%27M640%200V600%27%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%27%23CBBBA0%27%20stroke-width%3D%274%27%20opacity%3D%27.6%27%3E%3Cpath%20d%3D%27M0%20240H800%27%2F%3E%3Cpath%20d%3D%27M300%200V600%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;width:100%;max-width:100%;overflow-x:hidden;overscroll-behavior-x:none}
+@supports (overflow:clip){html{overflow-x:clip}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{width:100%;max-width:100%;position:relative;font-family:var(--sans);font-size:16px;line-height:1.6;background:var(--ivory);color:var(--text);overflow-x:hidden;overscroll-behavior-x:none}
+@supports (overflow:clip){body{overflow-x:clip}}
+main{width:100%;max-width:100%;overflow-x:hidden}
+@supports (overflow:clip){main{overflow-x:clip}}
+.container{width:100%;max-width:1200px;margin-inline:auto;padding-inline:20px}
+@media (min-width:1200px){.container{padding-inline:24px}}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+
+/* ===== CABEÇALHO (aprovado — não alterar) ===== */
+.site-header{position:absolute;top:0;left:0;right:0;z-index:40;padding-top:env(safe-area-inset-top,0px)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:16px}
+.brand{display:inline-flex;align-items:center;text-decoration:none;line-height:1}
+.brand__logo{display:block;width:199px;height:auto;object-fit:contain}
+@media (max-width:599px){.brand__logo{width:183px}}
+@media (min-width:900px){.brand__logo{width:219px}}
+.site-header .brand__logo{width:125px;max-height:73px;height:auto;object-fit:contain;object-position:left center}
+@media (min-width:900px){.site-header .brand__logo{width:146px;max-height:81px}}
+.burger{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;background:rgba(20,18,15,.25);border:1px solid rgba(247,243,237,.35);border-radius:10px;cursor:pointer}
+.burger span{display:block;height:2px;width:20px;background:var(--ivory);transition:transform .25s ease,opacity .25s ease}
+body.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){opacity:0}
+body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.menu{position:absolute;top:calc(100% + 8px);left:16px;right:16px;background:var(--ink-soft);border:1px solid var(--line-dark);border-radius:12px;display:none;box-shadow:0 24px 48px rgba(0,0,0,.4)}
+.menu.open{display:block}
+.menu ul{list-style:none}
+.menu a{display:flex;align-items:center;min-height:48px;padding:12px 20px;text-decoration:none;font-weight:500;font-size:16px;color:var(--ivory);border-top:1px solid var(--line-dark)}
+.menu li:first-child a{border-top:0}
+.menu a:hover{color:var(--gold-hover)}
+.menu .menu__wa{color:var(--gold);font-weight:700}
+.nav-cta{display:none}
+@media (min-width:900px){
+  .site-header{position:fixed;background:transparent;transition:background .3s ease,border-color .3s ease;border-bottom:1px solid transparent}
+  .site-header.scrolled{background:rgba(20,18,15,.97);border-bottom-color:var(--line-dark)}
+  .burger{display:none}
+  .menu{position:static;display:block;background:none;border:0;box-shadow:none;border-radius:0}
+  .menu ul{display:flex;align-items:center;gap:32px}
+  .menu a{border:0;min-height:44px;padding:8px 0;font-size:.9rem;color:rgba(247,243,237,.82)}
+  .menu a:hover{color:var(--ivory);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:6px}
+  .menu .menu__wa{display:none}
+  .nav-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 24px;background:var(--gold);color:var(--ink);border-radius:5px;text-decoration:none;font-weight:700;font-size:.9rem}
+  .nav-cta:hover{background:var(--gold-hover)}
+}
+
+/* ===== HERO — estrutura transplantada da página Vânia (bug mobile resolvido) ===== */
+.hero{position:relative;display:flex;align-items:center;min-height:clamp(520px,49.5vw,760px);padding:120px 48px 72px max(20px,calc((100vw - 1200px)/2 + 20px));background:var(--ink);isolation:isolate;overflow:hidden}
+.hero__media{position:absolute;inset:0;z-index:-2;overflow:hidden;background:var(--ink)}
+.hero__photo{position:absolute;inset:0;background:var(--ink-soft) var(--foto-hero) 50% 22%/cover no-repeat}
+.hero__overlay{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(20,18,15,.96) 0%,rgba(20,18,15,.90) 40%,rgba(20,18,15,.38) 62%,rgba(20,18,15,.10) 82%,rgba(20,18,15,.04) 100%)}
+.hero__content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;max-width:560px;text-align:left}
+.kicker{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.8rem,2.2rem + 3vw,5rem);line-height:1.08;margin-top:12px;color:var(--ivory);text-wrap:balance;max-width:24ch}
+.hero__text{margin-top:14px;max-width:46ch;font-size:1.0625rem;color:rgba(247,243,237,.88)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 28px;border-radius:5px;font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer}
+.btn svg{flex:none}
+.btn--gold{background:var(--gold);color:var(--ink)}
+.btn--gold:hover{background:var(--gold-hover)}
+.btn--ink{background:var(--ink);color:var(--ivory)}
+.btn--ink:hover{background:var(--ink-soft)}
+.btn--ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);min-height:48px;padding:0 24px;font-size:.95rem}
+.btn--ghost:hover{background:rgba(20,18,15,.06)}
+.hero .btn{margin-top:26px}
+.hero__scroll{position:absolute;left:50%;bottom:16px;z-index:2;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;transform:translateX(-50%);color:rgba(247,243,237,.8);text-decoration:none}
+.hero__scroll svg{animation:float 2.2s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media (prefers-reduced-motion:reduce){.hero__scroll svg{animation:none}}
+.hero__tag{position:absolute;left:24px;bottom:10px;z-index:2;font-size:10.5px;font-weight:500;letter-spacing:.03em;color:rgba(247,243,237,.62)}
+.hero__title-mobile,.hero__text-mobile{display:none}
+
+/* Tablet: mesma lógica intermediária da página de referência, sem viewport fullscreen. */
+@media (max-width:899px){
+  .hero{min-height:clamp(370px,100vw,520px);padding:calc(64px + 14px) 22px 32px;align-items:flex-end;justify-content:flex-start;text-align:center}
+  .hero__content{width:100%;max-width:none;align-items:center;text-align:center}
+  .hero__photo{background-position:50% 32%}
+  .hero__overlay{background:linear-gradient(90deg,rgba(20,18,15,.78),rgba(20,18,15,.12) 100%),linear-gradient(to top,rgba(20,18,15,.82),rgba(20,18,15,.12) 85%)}
+  .hero > .kicker,.hero__title-desktop,.hero__text-desktop,.hero__tag{display:none}
+  .hero__title-mobile,.hero__text-mobile{display:block}
+  .hero__title-mobile{margin-top:5px}
+  .hero h1{max-width:100%;margin-top:0;line-height:1;text-wrap:initial}
+  .hero__title-mobile span{display:block}
+  .hero__title-mobile .hero__name{font-size:clamp(3.05rem,13.3vw,3.8rem);font-weight:600;letter-spacing:-.025em;white-space:normal}
+  .hero__title-mobile .hero__specialty{font-size:clamp(1.75rem,7.3vw,2.18rem);font-weight:500;line-height:1.04;letter-spacing:-.02em;margin-top:1px}
+  .hero__text{max-width:34ch;margin-top:13px;font-size:1rem;line-height:1.47;color:rgba(247,243,237,.93)}
+  .hero .btn{justify-content:center;width:min(100%,320px);margin-top:20px;min-height:50px;padding-inline:16px;font-size:.91rem}
+}
+
+/* Mobile: mesmas regras estruturais do hero da Vânia que não apresenta o bug. */
+@media (max-width:599px){
+  .hero{height:100vh;height:100svh;min-height:0;padding:0;display:flex;align-items:center}
+  .hero__photo{background-image:url("imagens/hero-mobile.avif");}
+  .hero__content{position:absolute;left:20px;right:20px;bottom:60px;width:auto;max-width:none;margin:0;align-items:center;text-align:center}
+  .hero__photo{background-position:50% 32%}
+  .hero__overlay{background:linear-gradient(to top,rgba(13,11,9,.96) 0%,rgba(20,18,15,.62) 27%,rgba(20,18,15,.08) 67%,rgba(20,18,15,.12) 100%)}
+  .hero__title-mobile .hero__name{font-size:clamp(2.75rem,12.8vw,3.6rem);white-space:normal}
+  .hero__title-mobile .hero__specialty{font-size:clamp(1.55rem,7vw,2rem)}
+  .hero__scroll{left:50%;bottom:8px;display:grid;place-items:center;width:44px;height:40px;margin-left:-22px;transform:none;color:var(--ivory)}
+  .hero__scroll svg{width:22px;height:22px;animation:hero-seta 1.8s ease-in-out infinite}
+  @keyframes hero-seta{0%,100%{transform:translateY(-3px);opacity:.65}50%{transform:translateY(3px);opacity:1}}
+}
+
+/* ===== SEÇÃO 2 — ANTES E DEPOIS (aprovada — não alterar) ===== */
+.results{background:var(--ivory);padding:80px 0 88px}
+.label{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink)}
+.label::before{content:"";width:28px;height:2px;background:var(--gold);flex:none}
+.results h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.35rem,1.9rem + 2vw,3.25rem);line-height:1.12;margin-top:12px;color:var(--ink);text-wrap:balance}
+.results__text{margin-top:16px;max-width:46ch;color:var(--text-muted)}
+.pair{margin-top:48px}
+.pair__media{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.slot{position:relative;aspect-ratio:4/5;background:var(--sand) var(--ph-light) center/cover;border:1px solid var(--line-light);border-radius:6px}
+.chip{position:absolute;left:8px;bottom:8px;background:var(--ivory);color:var(--text);font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.06em;padding:4px 10px;border-radius:4px;border:1px solid var(--line-light)}
+.chip--right{left:auto;right:8px}
+.pair__caption{margin-top:16px;font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.15rem;color:var(--text);text-align:center}
+.pair--b{margin-top:56px;margin-left:0}
+.pair--b .slot:nth-child(2){margin-top:0}
+.pair--b .pair__caption{text-align:left;margin-top:24px}
+.results__note{margin-top:48px;font-size:12.5px;letter-spacing:.02em;color:var(--text-muted);text-align:center}
+.results__cta{display:flex;justify-content:center;margin-top:24px}
+.results__cta .btn{justify-content:center;text-align:center;max-width:100%}
+@media (min-width:900px){
+  .results{padding:128px 0 136px}
+  .results h2{font-size:clamp(3rem,2.2rem + 2.2vw,4.4rem)}
+  .results__head{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:end}
+  .results__head .results__text{margin-top:0;padding-bottom:6px}
+  .pair{margin-top:72px;display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:center}
+  .pair__media{gap:12px}
+  .pair__caption{margin-top:0;text-align:left;font-size:1.35rem;max-width:26ch}
+  .pair--b{grid-template-columns:1fr 2fr;margin-left:0;margin-top:88px}
+  .pair--b .pair__caption{order:-1}
+  .pair--b .slot:nth-child(2){margin-top:32px}
+  .results__note{margin-top:64px;text-align:left}
+  .results__cta{justify-content:flex-start}
+}
+
+/* ===== SEÇÃO 3 — SERVIÇOS (aprovada — não alterar) ===== */
+.services{background:var(--sand);padding:80px 0 88px}
+.services h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.35rem,1.9rem + 2vw,3.25rem);line-height:1.12;margin-top:12px;color:var(--ink);text-wrap:balance;max-width:22ch}
+.svc{margin-top:48px}
+.svc__title{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,1.6rem + 1.2vw,2.6rem);line-height:1.15}
+.svc__text{margin-top:12px;font-size:1rem}
+.svc--a{background:var(--ink);color:var(--ivory)}
+.svc--a .svc__grid{display:grid;grid-template-columns:1fr}
+.svc--a .svc__content{padding:28px 20px 32px}
+.svc--a .svc__text{color:rgba(247,243,237,.85)}
+.svc__media{position:relative;background-color:var(--ink-soft)}
+.svc__media--a{grid-row:1;min-height:240px;background-image:var(--foto-alisamento);background-size:cover;background-position:center}
+.svc--b{margin-top:16px;background:var(--ivory);color:var(--text);border:1px solid var(--line-light)}
+.svc--b .svc__grid{display:grid;grid-template-columns:1fr}
+.svc--b .svc__media{height:210px;background-image:var(--foto-mega);background-size:cover;background-position:center}
+.svc--b .svc__content{padding:24px 20px 28px}
+.svc--b .svc__text{color:var(--text-muted)}
+.svc__link{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;color:var(--gold-ink);font-weight:700;font-size:.95rem;text-decoration:none;border-bottom:1px solid var(--line-light)}
+.svc__link:hover{color:var(--ink);border-bottom-color:var(--gold-ink)}
+.media-tag{position:absolute;left:10px;bottom:10px;font-size:10.5px;font-weight:500;letter-spacing:.03em;color:rgba(247,243,237,.75);text-shadow:0 1px 8px rgba(20,18,15,.7)}
+.media-tag--light{color:var(--text-muted);background:rgba(247,243,237,.85);border:1px solid var(--line-light);border-radius:4px;padding:3px 8px;text-shadow:none}
+.services__cta{margin-top:48px;display:flex;justify-content:center}
+@media (min-width:900px){
+  .services{padding:128px 0 136px}
+  .services h2{font-size:clamp(3rem,2.2rem + 2.2vw,4.4rem)}
+  .svc{margin-top:64px}
+  .svc--a .svc__grid{grid-template-columns:1.05fr .95fr;min-height:440px;align-items:stretch}
+  .svc--a .svc__content{display:flex;flex-direction:column;justify-content:center;padding:64px 48px 64px max(20px,calc((100vw - 1200px)/2 + 20px))}
+  .svc--a .svc__media--a{grid-row:auto;min-height:100%}
+  .svc--b{margin-top:24px}
+  .svc--b .svc__grid{grid-template-columns:.95fr 1.05fr;min-height:420px}
+  .svc--b .svc__media{height:auto;min-height:100%}
+  .svc--b .svc__content{display:flex;flex-direction:column;justify-content:center;padding:64px max(20px,calc((100vw - 1200px)/2 + 20px)) 64px 48px}
+  .services__cta{margin-top:64px;justify-content:flex-start}
+}
+
+/* ===== SEÇÃO 4 — GALERIA (aprovada — não alterar) ===== */
+.gallery{background:var(--ivory);padding:80px 0 88px}
+.gallery h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.35rem,1.9rem + 2vw,3.25rem);line-height:1.12;margin-top:12px;color:var(--ink);text-wrap:balance}
+.gallery__text{margin-top:16px;max-width:46ch;color:var(--text-muted)}
+.g-grid{margin-top:32px;display:grid;grid-template-columns:3fr 2fr;gap:8px}
+.g-slot{position:relative;background:var(--img,var(--ph-light)) center/cover;border:1px solid var(--line-light);border-radius:6px}
+.g-slot--tall{grid-row:1/3}
+.g-slot:not(.g-slot--tall){aspect-ratio:4/5}
+.g-grid--b .g-slot:nth-child(2){aspect-ratio:4/3}
+.g-grid--b{margin-top:24px}
+.subhead{display:flex;align-items:center;gap:12px;margin-top:56px;font-family:var(--serif);font-weight:500;font-size:1.6rem;color:var(--ink)}
+.subhead::after{content:"";width:28px;height:2px;background:var(--gold)}
+.gallery__note{margin-top:48px;font-size:12.5px;letter-spacing:.02em;color:var(--text-muted);text-align:center}
+@media (min-width:900px){
+  .gallery{padding:128px 0 136px}
+  .gallery h2{font-size:clamp(3rem,2.2rem + 2.2vw,4.4rem)}
+  .g-grid{gap:12px}
+  .subhead{font-size:1.9rem;margin-top:72px}
+  .g-grid--b{grid-template-columns:2fr 3fr}
+  .g-grid--b .g-slot--tall{grid-column:2;grid-row:1/3}
+  .g-grid--b .g-slot:nth-child(2){grid-column:1;grid-row:1}
+  .g-grid--b .g-slot:nth-child(3){grid-column:1;grid-row:2}
+  .gallery__note{margin-top:64px;text-align:left}
+}
+
+/* ===== SEÇÃO 5 — CONHEÇA A RAFAELA (aprovada — não alterar) ===== */
+.about{background:var(--sand);padding:80px 0 88px}
+.about__grid{display:grid;grid-template-columns:1fr;gap:32px}
+.about__head{grid-row:1}
+.about__media{grid-row:2}
+.about__body{grid-row:3}
+.about h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.35rem,1.9rem + 2vw,3.25rem);line-height:1.12;margin-top:12px;color:var(--ink);text-wrap:balance}
+.about__media{position:relative;aspect-ratio:4/5;max-height:560px;background:var(--ink-soft) var(--foto-rafaela) 50% 20%/cover;border:1px solid var(--line-light);border-radius:6px}
+.about__media .media-tag{color:var(--text);background:rgba(247,243,237,.9);padding:4px 8px;border-radius:4px;text-shadow:none}
+.about__text{color:var(--text-muted);max-width:52ch}
+.about__ig{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;color:var(--gold-ink);font-weight:700;font-size:.95rem;text-decoration:none;border-bottom:1px solid var(--line-light)}
+.about__ig:hover{color:var(--ink);border-bottom-color:var(--gold-ink)}
+.about__courses{margin-top:32px;background:var(--ivory);border:1px solid var(--line-light);border-radius:8px;padding:24px 20px}
+.about__courses p{font-size:1rem;color:var(--text)}
+.about__courses .btn{margin-top:20px}
+@media (min-width:900px){
+  .about{padding:128px 0 136px}
+  .about h2{font-size:clamp(3rem,2.2rem + 2.2vw,4.4rem)}
+  .about__grid{grid-template-columns:.9fr 1.1fr;gap:48px}
+  .about__media{grid-column:1;grid-row:1/3;max-height:640px}
+  .about__head{grid-column:2;grid-row:1}
+  .about__body{grid-column:2;grid-row:2}
+}
+
+/* ===== SEÇÃO 6 — COMO COMEÇAR (aprovada — não alterar) ===== */
+.start{background:var(--ivory);padding:80px 0 88px}
+.start h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.35rem,1.9rem + 2vw,3.25rem);line-height:1.12;margin-top:12px;color:var(--ink);text-wrap:balance}
+.steps{margin-top:40px;background:var(--sand);border:1px solid var(--line-light);border-radius:8px}
+.step{padding:24px 20px;border-top:1px solid var(--line-light)}
+.step:first-child{border-top:0}
+.step__num{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-ink)}
+.step__title{margin-top:8px;font-family:var(--serif);font-weight:500;font-size:1.35rem;color:var(--ink)}
+.step__text{margin-top:8px;color:var(--text-muted);font-size:.975rem}
+.start__cta{margin-top:32px;display:flex;justify-content:center}
+.start__cta .btn{max-width:100%;text-align:center;justify-content:center}
+@media (min-width:900px){
+  .start{padding:128px 0 136px}
+  .start h2{font-size:clamp(3rem,2.2rem + 2.2vw,4.4rem)}
+  .steps{margin-top:56px;display:grid;grid-template-columns:1fr 1fr 1fr}
+  .step{border-top:0;padding:40px 32px}
+  .step + .step{border-left:1px solid var(--line-light)}
+  .step:nth-child(2){padding-top:56px}
+  .start__cta{margin-top:48px;justify-content:flex-start}
+}
+
+/* ===== SEÇÃO 7 — DÚVIDAS FREQUENTES (aprovada — não alterar) ===== */
+.faq{background:var(--sand);padding:80px 0 88px}
+.faq h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.35rem,1.9rem + 2vw,3.25rem);line-height:1.12;margin-top:12px;color:var(--ink);text-wrap:balance}
+.faq__list{margin-top:40px;background:var(--ivory);border:1px solid var(--line-light);border-radius:8px}
+.faq__item{border-top:1px solid var(--line-light)}
+.faq__item:first-child{border-top:0}
+.faq__q{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:52px;padding:16px 20px;background:none;border:0;cursor:pointer;font-family:var(--sans);font-weight:600;font-size:1rem;line-height:1.4;color:var(--ink);text-align:left}
+.faq__q:hover{color:var(--gold-ink)}
+.faq__q svg{flex:none;color:var(--gold-ink);transition:transform .3s ease}
+.faq__item.open .faq__q svg{transform:rotate(180deg)}
+.faq__a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.faq__item.open .faq__a{grid-template-rows:1fr}
+.faq__a-inner{overflow:hidden}
+.faq__a p{padding:0 20px 20px;color:var(--text-muted);font-size:.975rem;max-width:60ch}
+.faq__more{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:24px;color:var(--gold-ink);font-weight:700;font-size:.95rem;text-decoration:none;border-bottom:1px solid var(--line-light)}
+.faq__more:hover{color:var(--ink);border-bottom-color:var(--gold-ink)}
+@media (prefers-reduced-motion:reduce){.faq__a,.faq__q svg{transition:none}}
+@media (min-width:900px){
+  .faq{padding:128px 0 136px}
+  .faq h2{font-size:clamp(3rem,2.2rem + 2.2vw,4.4rem)}
+  .faq__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+  .faq__list{margin-top:0}
+  .faq__more{margin-top:32px}
+}
+
+/* ===== SEÇÃO 8 — LOCALIZAÇÃO (aprovada — não alterar) ===== */
+.location{background:var(--ivory);padding:80px 0 88px}
+.location h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.35rem,1.9rem + 2vw,3.25rem);line-height:1.12;margin-top:12px;color:var(--ink);text-wrap:balance}
+.loc__grid{margin-top:40px;display:grid;gap:24px}
+.loc__map{position:relative;min-height:220px;border:1px solid var(--line-light);border-radius:8px;background:var(--mapa) center/cover;display:flex;align-items:center;justify-content:center}
+.loc__pin{display:flex;flex-direction:column;align-items:center;gap:10px}
+.loc__pin small{font-size:11px;font-weight:600;letter-spacing:.02em;color:var(--text-muted);background:rgba(247,243,237,.92);border:1px solid var(--line-light);padding:4px 10px;border-radius:4px}
+.loc__text{color:var(--text-muted)}
+.loc__addr{margin-top:8px;font-weight:700;color:var(--ink)}
+.loc__comfort{margin-top:12px;color:var(--text-muted)}
+.loc__actions{margin-top:24px;display:flex;flex-direction:column;gap:12px;align-items:stretch}
+.loc__actions .btn{justify-content:center}
+@media (min-width:900px){
+  .location{padding:128px 0 136px}
+  .location h2{font-size:clamp(3rem,2.2rem + 2.2vw,4.4rem)}
+  .loc__grid{grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .loc__map{min-height:400px}
+  .loc__actions{flex-direction:row;align-items:flex-start}
+  .loc__actions .btn{justify-content:flex-start}
+}
+
+/* ===== SEÇÃO 9 — CONVITE FINAL + RODAPÉ (bloco ink único) ===== */
+.final{background:var(--ink);color:var(--ivory);text-align:center;padding:88px 20px 80px}
+.final h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.8rem,2.2rem + 3vw,5rem);line-height:1.1;margin-inline:auto;max-width:20ch;text-wrap:balance}
+.final__text{margin:16px auto 0;max-width:46ch;color:rgba(247,243,237,.85)}
+.final .btn{margin-top:32px}
+.footer{background:var(--ink);color:var(--ivory);border-top:1px solid var(--line-dark);padding:48px 20px calc(40px + env(safe-area-inset-bottom,0px))}
+.footer__inner{display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center}
+.footer .brand{align-items:center}
+.footer__tag{color:rgba(247,243,237,.7);font-size:.9rem}
+.footer__nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 24px}
+.footer__nav a{display:inline-flex;align-items:center;min-height:44px;color:rgba(247,243,237,.8);text-decoration:none;font-size:.9rem}
+.footer__nav a:hover{color:var(--ivory);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:6px}
+.footer__contact{display:flex;flex-direction:column;align-items:center;gap:4px}
+.footer__contact a{display:inline-flex;align-items:center;min-height:44px;color:var(--gold);text-decoration:none;font-size:.9rem;font-weight:600}
+.footer__contact a:hover{color:var(--gold-hover)}
+.footer__copy{font-size:12px;color:rgba(247,243,237,.55)}
+@media (min-width:900px){
+  .final{padding:128px 24px 96px}
+  .footer{padding:64px 24px 56px}
+  .footer__inner{display:grid;grid-template-columns:1.2fr 1fr 1fr;align-items:start;text-align:left}
+  .footer .brand{align-items:flex-start}
+  .footer__nav{justify-content:flex-start;flex-direction:column;gap:0}
+  .footer__contact{align-items:flex-start}
+  .footer__copy{grid-column:1/-1;border-top:1px solid var(--line-dark);margin-top:16px;padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="topo">
+  <div class="container">
+    <!-- Tratamento tipográfico provisório até o logo original -->
+    <a class="brand" href="#topo" aria-label="Studio Rafaela Cardoso"><img class="brand__logo" src="imagens/rc-logo.avif" alt="Studio Rafaela Cardoso"></a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+        <li><a class="menu__wa" href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Studio%20e%20quero%20conversar%20sobre%20o%20meu%20cabelo." target="_blank" rel="noopener">Conversar no WhatsApp</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Studio%20e%20quero%20conversar%20sobre%20o%20meu%20cabelo." target="_blank" rel="noopener">Conversar com a Rafaela</a>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO — estrutura mobile baseada na página Vânia ===== -->
+  <section class="hero" aria-label="Apresentação do Studio Rafaela Cardoso">
+    <div class="hero__media" aria-hidden="true">
+      <div class="hero__photo"></div>
+    </div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="kicker">Alisamentos • Mega Hair</p>
+      <h1 class="hero__title-desktop" id="hero-title">Alisamento e Mega Hair para o cabelo que você quer ver no espelho.</h1>
+      <h1 class="hero__title-mobile"><span class="hero__name">Rafaela Cardoso</span></h1>
+      <p class="hero__text hero__text-desktop">Quer fios mais alinhados? Mais comprimento ou volume? No Studio Rafaela Cardoso, o primeiro passo é entender o que você deseja para o seu cabelo.</p>
+      <p class="hero__text hero__text-mobile">Mais alinhamento, comprimento ou volume.<br>Vamos conversar sobre o seu cabelo.</p>
+      <a class="btn btn--gold" href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Studio%20e%20quero%20conversar%20sobre%20o%20meu%20cabelo." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.451-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+        Conversar com a Rafaela
+      </a>
+    </div>
+    <a class="hero__scroll" href="#resultados" aria-label="Rolar para ver resultados">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="hero__tag">Imagem conceitual — substituir pela foto real</p>
+  </section>
+
+  <!-- ===== SEÇÃO 2 — ANTES E DEPOIS (aprovada) ===== -->
+  <section class="results" id="resultados" aria-labelledby="results-title">
+    <div class="container">
+      <header class="results__head">
+        <div>
+          <p class="label">Antes e depois</p>
+          <h2 id="results-title">O resultado merece ser visto de perto.</h2>
+        </div>
+        <p class="results__text">Cada cabelo que chega ao Studio tem uma história, uma textura e um objetivo. Explore algumas transformações e encontre referências para a conversa sobre o seu.</p>
+      </header>
+      <figure class="pair pair--a">
+        <div class="pair__media">
+          <div class="slot" style="background-image:url('imagens/antes1.avif')" role="img" aria-label="Antes do atendimento"><span class="chip">Antes</span></div>
+          <div class="slot" style="background-image:url('imagens/depois1.avif')" role="img" aria-label="Depois do atendimento"><span class="chip chip--right">Depois</span></div>
+        </div>
+        <figcaption class="pair__caption">Caso 01 — inserir fotos reais do mesmo atendimento.</figcaption>
+      </figure>
+      <figure class="pair pair--b">
+        <div class="pair__media">
+          <div class="slot" style="background-image:url('imagens/antes2.avif')" role="img" aria-label="Antes do atendimento - caso 2"><span class="chip">Antes</span></div>
+          <div class="slot" style="background-image:url('imagens/depois2.avif')" role="img" aria-label="Depois do atendimento - caso 2"><span class="chip chip--right">Depois</span></div>
+        </div>
+        <figcaption class="pair__caption">Caso 02 — reservar o par para outra transformação real.</figcaption>
+      </figure>
+      <p class="results__note">Espaços reservados para pares reais do mesmo atendimento — fotos em breve.</p>
+      <div class="results__cta"><a class="btn btn--ink" href="https://api.whatsapp.com/send?phone=5522992905947&amp;text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20meu%20cabelo%20e%20conhecer%20os%20resultados%20do%20Studio." target="_blank" rel="noopener">Quero conversar sobre meu cabelo</a></div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO 3 — SERVIÇOS (aprovada) ===== -->
+  <section class="services" id="servicos" aria-labelledby="services-title">
+    <div class="container">
+      <p class="label">Serviços</p>
+      <h2 id="services-title">O que você gostaria de mudar no seu cabelo?</h2>
+    </div>
+    <article class="svc svc--a">
+      <div class="container svc__grid">
+        <div class="svc__content">
+          <h3 class="svc__title">Alisamentos</h3>
+          <p class="svc__text">Para quem deseja fios mais alinhados e quer entender qual resultado é possível alcançar no seu cabelo. Converse com a Rafaela sobre o estado dos seus fios, suas expectativas e os cuidados envolvidos.</p>
+        </div>
+        <figure class="svc__media svc__media--a" role="img" aria-label="Espaço reservado para foto conceitual de alisamento (fios alinhados e brilho).">
+          <span class="media-tag">Imagem conceitual — substituir pela foto real</span>
+        </figure>
+      </div>
+    </article>
+    <article class="svc svc--b">
+      <div class="container svc__grid">
+        <figure class="svc__media svc__media--b" role="img" aria-label="Espaço reservado para foto conceitual de Mega Hair (comprimento e volume).">
+          <span class="media-tag media-tag--light">Imagem conceitual — substituir pela foto real</span>
+        </figure>
+        <div class="svc__content">
+          <h3 class="svc__title">Mega Hair</h3>
+          <p class="svc__text">Mais comprimento, volume ou os dois? Veja os trabalhos do Studio e fale com a Rafaela sobre o visual que você tem em mente e as possibilidades para o seu cabelo.</p>
+          <a class="svc__link" href="#galeria">Ver trabalhos do Studio
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </article>
+    <div class="container services__cta">
+      <a class="btn btn--ink" href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20no%20Studio." target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.451-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+        Tirar dúvidas sobre os serviços
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO 4 — GALERIA (aprovada) ===== -->
+  <section class="gallery" id="galeria" aria-labelledby="gallery-title">
+    <div class="container">
+      <p class="label">Galeria</p>
+      <h2 id="gallery-title">Inspiração para imaginar o seu próximo cabelo.</h2>
+      <p class="gallery__text">Lisinho, longo, com movimento, com mais volume. Reunimos aqui diferentes trabalhos do Studio para você observar os detalhes e descobrir o que mais combina com o que procura.</p>
+      <div class="g-grid g-grid--a">
+        <figure class="g-slot g-slot--tall" style="--img:var(--foto-mega)" data-tipo="comprimento" role="img" aria-label="Espaço reservado para foto real: comprimento."><span class="media-tag media-tag--light">Imagem conceitual — comprimento</span></figure>
+        <figure class="g-slot" style="--img:var(--foto-alisamento)" data-tipo="textura" role="img" aria-label="Espaço reservado para foto real: textura."><span class="media-tag">Imagem conceitual — textura</span></figure>
+        <figure class="g-slot" style="--img:var(--ph-light)" data-tipo="movimento" role="img" aria-label="Espaço reservado para foto real: movimento."><span class="media-tag media-tag--light">Imagem conceitual — movimento</span></figure>
+      </div>
+      <h3 class="subhead">Mais inspirações</h3>
+      <div class="g-grid g-grid--b">
+        <figure class="g-slot g-slot--tall" style="--img:var(--foto-hero)" data-tipo="retrato" role="img" aria-label="Espaço reservado para foto real: retrato."><span class="media-tag">Imagem conceitual — retrato</span></figure>
+        <figure class="g-slot" style="--img:var(--foto-mega)" data-tipo="detalhe" role="img" aria-label="Espaço reservado para foto real: detalhe."><span class="media-tag media-tag--light">Imagem conceitual — detalhe</span></figure>
+        <figure class="g-slot" style="--img:var(--ph-light)" data-tipo="atendimento" role="img" aria-label="Espaço reservado para foto real: atendimento."><span class="media-tag media-tag--light">Imagem conceitual — atendimento</span></figure>
+      </div>
+      <p class="gallery__note">Composição provisória — as fotos reais dos trabalhos serão incluídas nesta etapa.</p>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO 5 — CONHEÇA A RAFAELA (aprovada) ===== -->
+  <section class="about" id="sobre" aria-labelledby="about-title">
+    <div class="container about__grid">
+      <header class="about__head">
+        <p class="label">Conheça a Rafaela</p>
+        <h2 id="about-title">Por trás de cada resultado, existe uma profissional que vive esse trabalho de perto.</h2>
+      </header>
+      <figure class="about__media" role="img" aria-label="Espaço reservado para o retrato real da Rafaela (imagem conceitual provisória).">
+        <span class="media-tag">Imagem conceitual — substituir pela foto real</span>
+      </figure>
+      <div class="about__body">
+        <p class="about__text">Rafaela Cardoso compartilha no perfil os cabelos que transforma, momentos do atendimento e parte do conhecimento que leva para a sua profissão. Aqui, você pode conhecer melhor o trabalho dela antes mesmo de iniciar uma conversa.</p>
+        <a class="about__ig" href="https://www.instagram.com/studio_rafaelacardosog/" target="_blank" rel="noopener">Ver o perfil no Instagram
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <div class="about__courses">
+          <p>Também tem interesse em aprender? Rafaela oferece cursos. Entre em contato para saber mais sobre as formações e tirar suas dúvidas.</p>
+          <a class="btn btn--ghost" href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Tenho%20interesse%20nos%20cursos%20do%20Studio.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener">Perguntar sobre os cursos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO 6 — COMO COMEÇAR (aprovada) ===== -->
+  <section class="start" id="como-comecar" aria-labelledby="start-title">
+    <div class="container">
+      <p class="label">Como começar</p>
+      <h2 id="start-title">Você não precisa chegar sabendo qual serviço escolher.</h2>
+      <div class="steps">
+        <div class="step">
+          <p class="step__num">Passo 1</p>
+          <h3 class="step__title">Conte o que deseja</h3>
+          <p class="step__text">Envie uma mensagem e fale sobre o resultado que está procurando.</p>
+        </div>
+        <div class="step">
+          <p class="step__num">Passo 2</p>
+          <h3 class="step__title">Mostre seu cabelo</h3>
+          <p class="step__text">Fotos atuais podem ajudar a iniciar a conversa e a entender melhor suas expectativas.</p>
+        </div>
+        <div class="step">
+          <p class="step__num">Passo 3</p>
+          <h3 class="step__title">Tire suas dúvidas</h3>
+          <p class="step__text">Pergunte sobre o serviço, os cuidados e as informações necessárias antes de agendar.</p>
+        </div>
+      </div>
+      <div class="start__cta">
+        <a class="btn btn--ink" href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20uma%20conversa%20sobre%20o%20meu%20cabelo." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.451-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+          Iniciar uma conversa no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO 7 — DÚVIDAS FREQUENTES (aprovada) ===== -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="container faq__grid">
+      <header>
+        <p class="label">FAQ</p>
+        <h2 id="faq-title">Dúvidas frequentes</h2>
+      </header>
+      <div>
+        <div class="faq__list">
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Meu cabelo pode receber alisamento ou Mega Hair?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__a" id="faq-a1" role="region" aria-labelledby="faq-q1" aria-hidden="true">
+              <div class="faq__a-inner"><p>Isso depende das características e do estado dos seus fios. Fale com a Rafaela e conte o que você já fez no cabelo para entender quais possibilidades devem ser avaliadas.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Como saber qual resultado combina comigo?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__a" id="faq-a2" role="region" aria-labelledby="faq-q2" aria-hidden="true">
+              <div class="faq__a-inner"><p>Você pode enviar uma foto do seu cabelo e referências do que gostaria de alcançar. A conversa ajuda a alinhar expectativas antes de escolher o serviço.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Como funcionam os valores?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__a" id="faq-a3" role="region" aria-labelledby="faq-q3" aria-hidden="true">
+              <div class="faq__a-inner"><p>Entre em contato, informe o serviço de interesse e envie as informações solicitadas para receber a orientação adequada ao seu caso.</p></div>
+            </div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">O Mega Hair precisa de manutenção? E quais são os cuidados após o alisamento?
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq__a" id="faq-a4" role="region" aria-labelledby="faq-q4" aria-hidden="true">
+              <div class="faq__a-inner"><p>Os cuidados variam conforme o serviço realizado. A Rafaela pode explicar o que considerar antes de você tomar sua decisão.</p></div>
+            </div>
+          </div>
+        </div>
+        <a class="faq__more" href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Ainda%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os%20do%20Studio." target="_blank" rel="noopener">Ainda com dúvidas? Conversar no WhatsApp
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO 8 — LOCALIZAÇÃO (aprovada) ===== -->
+  <section class="location" id="localizacao" aria-labelledby="location-title">
+    <div class="container">
+      <p class="label">Localização</p>
+      <h2 id="location-title">Seu próximo cabelo começa aqui.</h2>
+      <div class="loc__grid">
+        <div class="loc__map" role="img" aria-label="Ilustração provisória de mapa. Use o botão Ver rota para abrir a localização.">
+          <div class="loc__pin">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7z" fill="#C5A46A"/><circle cx="12" cy="9" r="2.6" fill="#14120F"/></svg>
+            <small>Av. Independência, 124 — Unamar</small>
+          </div>
+        </div>
+        <div class="loc__body">
+          <p class="loc__text">O Studio Rafaela Cardoso atende em Unamar, Cabo Frio – RJ.</p>
+          <p class="loc__addr">Av. Independência, 124 — Unamar, Cabo Frio – RJ</p>
+          <p class="loc__comfort">Confira a rota ou fale com a Rafaela antes da sua visita.</p>
+          <div class="loc__actions">
+            <a class="btn btn--ink" href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Studio%20e%20quero%20conversar%20sobre%20o%20meu%20cabelo." target="_blank" rel="noopener">Falar no WhatsApp</a>
+            <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&query=Av.%20Independ%C3%AAncia%2C%20124%20-%20Unamar%2C%20Cabo%20Frio%20-%20RJ" target="_blank" rel="noopener">Ver rota
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SEÇÃO 9 — CONVITE FINAL ===== -->
+  <section class="final" aria-labelledby="final-title">
+    <h2 id="final-title">Gostou do que viu? Vamos falar sobre o seu cabelo.</h2>
+    <p class="final__text">Conte para a Rafaela o que você deseja, envie suas referências e tire suas dúvidas sobre alisamento ou Mega Hair. Uma conversa é o melhor lugar para começar.</p>
+    <a class="btn btn--gold" href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Studio%20e%20quero%20conversar%20sobre%20o%20meu%20cabelo." target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.451-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+      Conversar com a Rafaela
+    </a>
+  </section>
+</main>
+
+<!-- ===== RODAPÉ (mesmo bloco ink, divisória line-dark) ===== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <a class="brand" href="#topo" aria-label="Studio Rafaela Cardoso"><img class="brand__logo" src="imagens/logo.avif" alt="Studio Rafaela Cardoso"></a>
+      <p class="footer__tag">Alisamentos e Mega Hair</p>
+    </div>
+    <nav class="footer__nav" aria-label="Navegação do rodapé">
+      <a href="#resultados">Resultados</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#localizacao">Localização</a>
+    </nav>
+    <div class="footer__contact">
+      <a href="https://www.instagram.com/studio_rafaelacardosog/" target="_blank" rel="noopener">Instagram — @studio_rafaelacardosog</a>
+      <a href="https://api.whatsapp.com/send?phone=5522992905947&text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Studio%20e%20quero%20conversar%20sobre%20o%20meu%20cabelo." target="_blank" rel="noopener">WhatsApp — (22) 99290-5947</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Independ%C3%AAncia%2C%20124%20-%20Unamar%2C%20Cabo%20Frio%20-%20RJ" target="_blank" rel="noopener">Av. Independência, 124 — Unamar, Cabo Frio – RJ</a>
+    </div>
+    <p class="footer__copy"><span>© 2026 Studio Rafaela Cardoso — Todos os direitos reservados.</span><span>Alisamentos • Mega Hair</span></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.burger'),menu=document.getElementById('menu'),header=document.querySelector('.site-header'),mq=window.matchMedia('(min-width:900px)');
+  function setOpen(o){menu.classList.toggle('open',o);document.body.classList.toggle('menu-open',o);btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');}
+  btn.addEventListener('click',function(){setOpen(!menu.classList.contains('open'));});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))setOpen(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){setOpen(false);btn.focus();}});
+  document.addEventListener('click',function(e){if(!e.target.closest('.site-header'))setOpen(false);});
+  function onScroll(){if(mq.matches){header.classList.toggle('scrolled',window.scrollY>32);}else{header.classList.remove('scrolled');}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',function(){if(mq.matches)setOpen(false);onScroll();});
+  onScroll();
+
+  /* Hero mobile: mesma sincronização de viewport usada na página Vânia.
+     Só recalcula quando há mudança real de largura, ignorando abrir/fechar a barra do navegador. */
+  var heroSecao=document.querySelector('.hero');
+  var larguraMedida=window.innerWidth;
+  function fixarAlturaHero(){
+    if(!heroSecao){return;}
+    if(window.matchMedia('(max-width:599px)').matches){
+      var alturaVisual=window.visualViewport?window.visualViewport.height:window.innerHeight;
+      var altura=Math.floor(Math.min(window.innerHeight,alturaVisual));
+      if(altura>0){heroSecao.style.height=altura+'px';}
+    }else{
+      heroSecao.style.height='';
+    }
+  }
+  fixarAlturaHero();
+  window.addEventListener('resize',function(){
+    if(Math.abs(window.innerWidth-larguraMedida)>64){
+      larguraMedida=window.innerWidth;
+      window.setTimeout(fixarAlturaHero,250);
+    }
+  },{passive:true});
+
+  /* No celular, congelar a altura inicial: a barra do navegador muda a viewport ao rolar. */
+
+  /* FAQ — inicia fechado; abre apenas por interação; múltiplos itens independentes */
+  document.querySelectorAll('.faq__q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.closest('.faq__item'),open=item.classList.toggle('open');
+      q.setAttribute('aria-expanded',open);
+      document.getElementById(q.getAttribute('aria-controls')).setAttribute('aria-hidden',String(!open));
+    });
+  });
+})();
+</script>
+</body>
+</html>
