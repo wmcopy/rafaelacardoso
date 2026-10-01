@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Versão v007: foto de Alisamentos ocupa a largura total da seção no mobile, sem alterar a imagem. -->
+<!-- Versão v006: foto de Alisamentos em largura total, sem recorte; versão v005 preservada. -->
 <!-- Versão v005: hero v004 preservado; correção exclusiva de overflow/arraste horizontal no mobile. -->
 <!-- Versão: v004 — hero mobile transplantado da estrutura funcional da página Vânia. -->
 <html lang="pt-BR">
@@ -24,7 +26,7 @@
   --foto-hero:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27900%27%20height%3D%271200%27%20viewBox%3D%270%200%20900%201200%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27a%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%270%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%2329241F%27%2F%3E%3Cstop%20offset%3D%27.6%27%20stop-color%3D%27%2314120F%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%230d0b09%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27b%27%20cx%3D%27.5%27%20cy%3D%27.3%27%20r%3D%27.75%27%3E%3Cstop%20offset%3D%270%27%20stop-color%3D%27%23C5A46A%27%20stop-opacity%3D%27.2%27%2F%3E%3Cstop%20offset%3D%271%27%20stop-color%3D%27%23C5A46A%27%20stop-opacity%3D%270%27%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%27900%27%20height%3D%271200%27%20fill%3D%27url%28%23a%29%27%2F%3E%3Crect%20width%3D%27900%27%20height%3D%271200%27%20fill%3D%27url%28%23b%29%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M310%20-60C270%20300%20350%20720%20305%201260%27%20stroke%3D%27%23332b24%27%20stroke-width%3D%27110%27%20opacity%3D%27.5%27%2F%3E%3Cpath%20d%3D%27M460%20-60C430%20340%20510%20760%20465%201260%27%20stroke%3D%27%233a3129%27%20stroke-width%3D%27130%27%20opacity%3D%27.45%27%2F%3E%3Cpath%20d%3D%27M610%20-60C580%20300%20660%20720%20615%201260%27%20stroke%3D%27%232b241e%27%20stroke-width%3D%27110%27%20opacity%3D%27.5%27%2F%3E%3Cpath%20d%3D%27M385%20-60C355%20320%20430%20740%20390%201260%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%275%27%20opacity%3D%27.14%27%2F%3E%3Cpath%20d%3D%27M535%20-60C505%20320%20585%20740%20540%201260%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%274%27%20opacity%3D%27.1%27%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%27%23C5A46A%27%20opacity%3D%27.15%27%3E%3Ccircle%20cx%3D%27150%27%20cy%3D%27230%27%20r%3D%2722%27%2F%3E%3Ccircle%20cx%3D%27760%27%20cy%3D%27190%27%20r%3D%2716%27%2F%3E%3Ccircle%20cx%3D%27690%27%20cy%3D%27330%27%20r%3D%2710%27%2F%3E%3Ccircle%20cx%3D%27210%27%20cy%3D%27410%27%20r%3D%278%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   --foto-rafaela:var(--ph-light); /* placeholder independente do hero; trocar pelo retrato real */
   --ph-light:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27600%27%20height%3D%27750%27%20viewBox%3D%270%200%20600%20750%27%3E%3Crect%20width%3D%27600%27%20height%3D%27750%27%20fill%3D%27%23EBE3D7%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M200%20-40C170%20200%20230%20480%20195%20790%27%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2770%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M310%20-40C285%20220%20350%20500%20310%20790%27%20stroke%3D%27%23DFD5C6%27%20stroke-width%3D%2780%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M420%20-40C400%20200%20460%20480%20425%20790%27%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2770%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M255%20-40C230%20210%20290%20490%20255%20790%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%273%27%20opacity%3D%27.22%27%2F%3E%3Cpath%20d%3D%27M365%20-40C340%20210%20400%20490%20365%20790%27%20stroke%3D%27%2380602E%27%20stroke-width%3D%272.5%27%20opacity%3D%27.15%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-  --foto-alisamento:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%271000%27%20viewBox%3D%270%200%20800%201000%27%3E%3Crect%20width%3D%27800%27%20height%3D%271000%27%20fill%3D%27%231b1713%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M180%20-40L175%201040%27%20stroke%3D%27%232b241e%27%20stroke-width%3D%2790%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M320%20-40L318%201040%27%20stroke%3D%27%23332b24%27%20stroke-width%3D%27110%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M470%20-40L468%201040%27%20stroke%3D%27%232b241e%27%20stroke-width%3D%27100%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M620%20-40L618%201040%27%20stroke%3D%27%233a3129%27%20stroke-width%3D%2790%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M250%20-40L248%201040%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%274%27%20opacity%3D%27.18%27%2F%3E%3Cpath%20d%3D%27M545%20-40L543%201040%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%273%27%20opacity%3D%27.14%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  --foto-alisamento:url("imagens/alisamento.avif");
   --foto-mega:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%271200%27%20height%3D%27800%27%20viewBox%3D%270%200%201200%20800%27%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27%23E4DACB%27%2F%3E%3Cg%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M-40%20160C300%20120%20700%20200%201240%20150%27%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2770%27%20opacity%3D%27.9%27%2F%3E%3Cpath%20d%3D%27M-40%20300C300%20260%20700%20340%201240%20290%27%20stroke%3D%27%23CFBFA9%27%20stroke-width%3D%2780%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M-40%20450C300%20410%20700%20490%201240%20440%27%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2780%27%20opacity%3D%27.9%27%2F%3E%3Cpath%20d%3D%27M-40%20600C300%20560%20700%20640%201240%20590%27%20stroke%3D%27%23CFBFA9%27%20stroke-width%3D%2770%27%20opacity%3D%27.8%27%2F%3E%3Cpath%20d%3D%27M-40%20230C300%20190%20700%20270%201240%20220%27%20stroke%3D%27%23C5A46A%27%20stroke-width%3D%274%27%20opacity%3D%27.25%27%2F%3E%3Cpath%20d%3D%27M-40%20520C300%20480%20700%20560%201240%20510%27%20stroke%3D%27%2380602E%27%20stroke-width%3D%273%27%20opacity%3D%27.15%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
   /* Mapa estilizado (SVG) */
   --mapa:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27800%27%20height%3D%27600%27%20viewBox%3D%270%200%20800%20600%27%3E%3Crect%20width%3D%27800%27%20height%3D%27600%27%20fill%3D%27%23F2ECE2%27%2F%3E%3Cg%20stroke%3D%27%23D9CFC0%27%20stroke-width%3D%2714%27%20fill%3D%27none%27%20opacity%3D%27.8%27%3E%3Cpath%20d%3D%27M0%20150H800%27%2F%3E%3Cpath%20d%3D%27M0%20340C200%20320%20500%20360%20800%20330%27%2F%3E%3Cpath%20d%3D%27M0%20500H800%27%2F%3E%3Cpath%20d%3D%27M180%200V600%27%2F%3E%3Cpath%20d%3D%27M420%200C430%20200%20410%20400%20425%20600%27%2F%3E%3Cpath%20d%3D%27M640%200V600%27%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%27%23CBBBA0%27%20stroke-width%3D%274%27%20opacity%3D%27.6%27%3E%3Cpath%20d%3D%27M0%20240H800%27%2F%3E%3Cpath%20d%3D%27M300%200V600%27%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
@@ -176,7 +178,9 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45de
 .svc--a .svc__content{padding:28px 20px 32px}
 .svc--a .svc__text{color:rgba(247,243,237,.85)}
 .svc__media{position:relative;background-color:var(--ink-soft)}
-.svc__media--a{grid-row:1;min-height:240px;background-image:var(--foto-alisamento);background-size:cover;background-position:center}
+.svc__media--a{grid-row:1;min-height:0;background-color:var(--ink-soft)}
+.svc__media--a img{display:block;width:100%;height:auto}
+@media (max-width:899px){.svc--a .svc__media--a{margin-inline:-20px}}
 .svc--b{margin-top:16px;background:var(--ivory);color:var(--text);border:1px solid var(--line-light)}
 .svc--b .svc__grid{display:grid;grid-template-columns:1fr}
 .svc--b .svc__media{height:210px;background-image:var(--foto-mega);background-size:cover;background-position:center}
@@ -193,7 +197,7 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45de
   .svc{margin-top:64px}
   .svc--a .svc__grid{grid-template-columns:1.05fr .95fr;min-height:440px;align-items:stretch}
   .svc--a .svc__content{display:flex;flex-direction:column;justify-content:center;padding:64px 48px 64px max(20px,calc((100vw - 1200px)/2 + 20px))}
-  .svc--a .svc__media--a{grid-row:auto;min-height:100%}
+  .svc--a .svc__media--a{grid-row:auto;min-height:0;display:flex;align-items:center;justify-content:center}
   .svc--b{margin-top:24px}
   .svc--b .svc__grid{grid-template-columns:.95fr 1.05fr;min-height:420px}
   .svc--b .svc__media{height:auto;min-height:100%}
@@ -431,8 +435,8 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45de
           <h3 class="svc__title">Alisamentos</h3>
           <p class="svc__text">Para quem deseja fios mais alinhados e quer entender qual resultado é possível alcançar no seu cabelo. Converse com a Rafaela sobre o estado dos seus fios, suas expectativas e os cuidados envolvidos.</p>
         </div>
-        <figure class="svc__media svc__media--a" role="img" aria-label="Espaço reservado para foto conceitual de alisamento (fios alinhados e brilho).">
-          <span class="media-tag">Imagem conceitual — substituir pela foto real</span>
+        <figure class="svc__media svc__media--a">
+          <img src="imagens/alisamento.avif" alt="Resultado de alisamento com fios alinhados e brilho" loading="lazy" decoding="async">
         </figure>
       </div>
     </article>
